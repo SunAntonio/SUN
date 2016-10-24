@@ -1,0 +1,20 @@
+<ion-view>
+        <div class="bar bar-header bar-assertive">
+            <button class="button ion-ios-arrow-back button-clear" ui-sref="tabs.menu.home"></button>
+            <h2 class="title">用户登录</h2>
+        </div>
+        <div class="scroll-content has-header">
+            <div class="list">
+                <div class="item item-input">
+                    <div class="input-label">账号：</div>
+                    <input type="text" placeholder="手机/邮箱/账号" ng-model="data.email">
+                </div>
+                <div class="item item-input">
+                    <div class="input-label">密码：</div>
+                    <input type="password" ng-model="data.password" placeholder="请输入密码">
+                </div>
+                <button type="button" class="button button-full  button-royal" ng-disabled="!data.email || !data.password" ng-click="return()">登录</button>
+                <div style="text-align: right; cursor: pointer"><a ui-sref="tabs.register">注册？</a></div>
+            </div>
+        </div>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view title="风景">
+    <ion-header-bar class="bar-stable" align-title="center">
+        <button class="button ion-ios-arrow-back button-clear" ui-sref="tabs.menu.home"></button>
+        <h2 class="title">风景</h2>
+        <button class="button button-clear" ui-sref="tabs.register-enter">登录</button>
+    </ion-header-bar>
+    <ion-content class="detail-sceny">
+        <ion-item ng-repeat="scenery in detail_scenery">
+           <a><img ng-src={{scenery["img-scenery"]}} ></a>
+            <p>{{scenery.detail}}</p>
+        </ion-item>
+    </ion-content>
+</ion-view>

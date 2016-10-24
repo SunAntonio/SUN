@@ -1,0 +1,50 @@
+<ion-side-menus>
+    <!--主页面-->
+    <ion-side-menu-content class="bar-positive">
+        <ion-nav-view name="side-menu"></ion-nav-view>
+    </ion-side-menu-content>
+    侧滑页面
+    <ion-side-menu side="left">
+        <!--侧滑页面顶部bar-->
+        <div class="my_center">个人中心</div>
+        <div style="background:url('images/enter_bg.jpg'); background-size:100% 100%;height: 150px;">
+            <div style="text-align: center;padding-top: 1.2em">
+                <a style="font-size: 1.5em;position: relative" ng-click="showAlert()" ui-sref="tabs.register-enter" menu-close>
+                    <img src="images/1.jpg" style="width: 80px;height: 80px;;border-radius: 50%" >
+    <span style="font-size: 1.2em;position: absolute;right: 8px;bottom: 0;transform: Rotate(-45deg)">
+    <icon class="ion-female" style="color: #84385f"></icon>
+        <!--<icon class="ion-male"></icon>-->
+    </span>
+                </a>
+                <p style="padding: 0;margin: 0;color: #f1f4f7">娇羞的妹子</p>
+                <div style="color:#ffffff">
+                    <icon class="ion-ios-compose-outline" style="font-size: 1.5em"  ng-click="showAlert()"></icon>
+                    <span>输入您的个性标签</span>
+                </div>
+            </div>
+        </div>
+        <!--侧滑页面主要内容-->
+        <ion-content style="margin-top: 16.5em;color: #0a9dc7">
+            <div class="list">
+                <div class="item" ng-click="showAlert()" ui-sref="tabs.home" menu-close>
+                    <icon class="ion-ios-paw con"></icon><span class="my_pad">晒晒</span>
+                </div>
+                <div class="item" ng-click="showAlert()" ui-sref="tabs.home" menu-close>
+                    <icon class="ion-social-reddit con"></icon><span class="my_pad">个人偏好</span>
+                </div>
+                <div class="item" ng-click="showAlert()" ui-sref="tabs.home" menu-close>
+                    <icon class="ion-android-favorite con"></icon><span class="my_pad">我的收藏</span>
+                </div>
+                <div class="item" ng-click="showAlert()" ui-sref="tabs.home" menu-close>
+                    <icon class="ion-share con"></icon><span class="my_pad">分享</span>
+                </div>
+                <div class="item" ng-click="showAlert()" ui-sref="tabs.home" menu-close>
+                    <icon class="ion-chatbubbles con"></icon><span class="my_pad">意见反馈</span>
+                </div>
+                <div class="item" ui-sref="tour" menu-close>
+                    <icon class="ion-android-exit con"></icon><span class="my_pad">安全退出</span>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

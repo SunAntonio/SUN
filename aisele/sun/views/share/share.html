@@ -1,0 +1,37 @@
+<ion-view title="分享">
+    <ion-header-bar class="bar-stable" align-title="center">
+        <h2 class="title">分享</h2>
+    </ion-header-bar>
+    <ion-content>
+        <!--<div class="scroll-content  overflow-scroll">-->
+        <div class="list card" ng-repeat="shared in share">
+                <div class="item item-avatar-left ">
+                    <img ng-src="{{shared['head_img']}}" >
+                    <h2>{{shared.name}}</h2>
+                    <P>{{shared.details}}</P>
+                </div>
+                <div class="item item-image">
+                    <img ng-src="{{shared['share_img']}}">
+                </div>
+                <div class="item tabs tabs-icon-left share">
+                    <div class="tab-item" ng-click="add(shared)">
+                        <i class="icon ion-thumbsup assertive"></i>赞
+                        <a>{{shared.praise}}</a>
+                    </div>
+                    <div class="tab-item"  ng-click="drop(shared)">
+                        <i class="icon ion-thumbsdown calm"></i>踩
+                        <a>{{shared.tread}}</a>
+                    </div>
+                    <div class="tab-item"  ng-click="showPopup(shared)">
+                        <i class="icon ion-chatbox energized"></i>评论
+                        <a>{{shared.talkAbout}}</a>
+                    </div>
+                    <div class="tab-item">
+                        <i class="icon ion-share balanced"></i>分享
+                    </div>
+                </div>
+            </div>
+        <div>
+        </div>
+    </ion-content>
+</ion-view>

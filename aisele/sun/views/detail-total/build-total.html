@@ -1,0 +1,14 @@
+<ion-view title="特色建筑">
+    <ion-header-bar class="bar-stable" align-title="center">
+        <button class="button ion-ios-arrow-back button-clear" ui-sref="tabs.menu.home"></button>
+        <h2 class="title">特色建筑</h2>
+        <!--<button class="button button-clear" ui-sref="tabs.register-enter">登录</button>-->
+    </ion-header-bar>
+    <ion-content class="detail-sceny">
+        <ion-item ng-repeat="build in detail_build">
+            <p>{{build.buildName}}</p>
+            <a><img ng-src={{build["buildImg"]}} ></a>
+            <p>{{build.buildDetail}}</p>
+        </ion-item>
+    </ion-content>
+</ion-view>

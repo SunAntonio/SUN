@@ -1,0 +1,12 @@
+<ion-view title="详情">
+    <ion-header-bar class="bar-stable" align-title="center">
+        <button class="button ion-ios-arrow-back button-clear" ui-sref="tabs.nation"></button>
+        <h2 class="title">{{data_detail["de_name"]}}</h2>
+    </ion-header-bar>
+    <ion-content class="detail-sceny">
+        <ion-item>
+            <p><img ng-src="{{data_detail.de_total_img}}"></p>
+            <p class="indent">{{data_detail.de_total}}</p>
+        </ion-item>
+    </ion-content>
+</ion-view>

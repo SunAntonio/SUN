@@ -1,0 +1,57 @@
+<ion-view>
+    <ion-header-bar class="bar-stable" align-title="center">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h2 class="title">艾瑟乐</h2>
+        <button class="button button-clear" ui-sref="tabs.menu.register-enter">登录</button>
+    </ion-header-bar>
+    <ion-content>
+        <ion-slide-box auto-play="true" does-continue="true"
+                       slide-interval="2500" show-pager="false">
+            <ion-slide>
+                <div class="box"><img src="images/slid-1.jpg"/></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slid-2.jpg"/></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slid-3.jpg"/></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slid-4.jpg"/></div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="row">
+            <div class="col" style="background:palevioletred;" ui-sref="tabs.culture-total">文化</div>
+            <div class="col" style="background:rebeccapurple;" ui-sref="tabs.scenery-total">风景</div>
+            <div class="col" style="background:brown;" ui-sref="tabs.cate-total">美食</div>
+        </div>
+        <div class="row">
+            <div class="col" style="background:deepskyblue;" ui-sref="tabs.craft-total">工艺</div>
+            <div class="col" style="background:darkslategrey;" ui-sref="tabs.build-total">建筑</div>
+            <div class="col" style="background:royalblue;" ui-sref="tabs.medicine-total">医药</div>
+        </div>
+        <h3 style="text-align: center;font-size: 16px;color: #8a6d3b">站长推荐</h3>
+        <div class="row row1 row2 clear">
+            <div class="col-50" ng-repeat="del in datadel" ui-sref="tabs.detail-home({title:del.title})">
+                <div class="clear">
+                    <p>
+                        <a>
+                            <img ng-src="{{del.image_url}}">
+                            <span style="text-align: center">{{del.title}}</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h3 style="text-align: center;font-size: 16px;color: #8a6d3b">56个民族56首诗</h3>
+        <div style="text-align: center" ng-repeat="data_trasion in data_trasion">
+            <p style="color: #286090">{{data_trasion.title}}</p>
+            <p>{{data_trasion.home_one}}</p>
+            <p>{{data_trasion.two}}</p>
+            <p>{{data_trasion.three}}</p>
+            <p>{{data_trasion.four}}</p>
+        </div>
+
+    </ion-content>
+</ion-view>
+
